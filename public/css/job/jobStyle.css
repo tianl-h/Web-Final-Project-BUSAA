@@ -1,0 +1,21 @@
+/* CSS styles for a basic container with a form, including input fields, labels, and buttons */
+.job-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.job-buttons a {
+  padding: 8px 12px;
+  margin-right: 10px; 
+  background-color: rgb(105, 121, 212);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.job-buttons a:hover {
+  background-color: #3e8e41;
+}
+  

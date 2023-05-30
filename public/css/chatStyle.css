@@ -1,0 +1,132 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.chat-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.chat-header {
+  text-align: center;
+  color: darkblue;
+}
+
+.chat-introduction {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Chat button */
+.chat-button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chat-button:hover {
+  background-color: #0056b3;
+}
+
+/* Chat container */
+.chat-container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.chat-close-button:hover {
+  color: lightcoral;
+}
+
+/* Chat window */
+.chat-window {
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.chat {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.chat li .username {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Chat form */
+.chat-form {
+  display: flex;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.chat-submit {
+  display: block;
+  width: 100px;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-submit:hover {
+  background-color: #0056b3;
+}
+
+.login-message {
+    font-size: 20px; /* Adjust the font size as needed */
+    text-align: center;
+    margin-top: 30px; /* Adjust the margin as needed */
+  }
+  
+  

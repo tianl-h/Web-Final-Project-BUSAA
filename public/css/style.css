@@ -1,0 +1,280 @@
+/* CSS styles for a basic container with a form, including input fields, labels, and buttons */
+@media (max-width: 767px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    
+  .nav-item {
+    margin-bottom: 10px;
+    background-color: cyan;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+}
+    
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/images/campus-spring.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  flex: 1;
+}
+
+header {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header.logo {
+  width: 100px;
+  height: 100px;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-container {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-text {
+  margin-left: 10px;
+}
+
+.header-text h1 {
+  font-size: 3em;
+  color: darkblue;
+}
+
+.header-text h2 {
+  font-size: 1.5em;
+  color: darkblue;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+  
+nav li {
+  margin: 0 28px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item {
+  background-color: cyan;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+
+main {
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  flex-grow: 1;
+  min-height: calc(100vh - 100px)
+}
+
+.social-media-icons {
+  display: flex;
+  width: 150px;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-left: auto;
+}
+
+.social-media-icon {
+  width: 40px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+}
+
+.social-media-icon:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* On hover, translate the social media icon upward by 3 pixels and add a box shadow */
+.social-media-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0,0,0,0.15);
+}
+
+/* On active (click), translate the social media icon downward by 1 pixel and add a different box shadow */
+.social-media-icon:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Styles for the social main p */
+main p {
+  font-size: 1em;
+  text-align: left;
+}
+
+/* Styles for h1, h2 */
+main h1, h2 {
+  text-align: left;
+  color: darkblue;
+}
+
+/* Additional styles for content spacing */
+.content-container {
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.footer-text {
+  margin-right: 20px;
+  width: 100%;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: darkgrey;
+  padding: 20px;
+  position: relative;
+  left: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-container .fa-facebook,
+.footer-container .fa-instagram,
+.footer-container .fa-linkedin,
+.footer-container .fa-youtube,
+.footer-container .fa-twitter {
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  box-shadow: none;
+  transition: none;
+}
+
+.footer-container .fa-facebook:hover,
+.footer-container .fa-instagram:hover,
+.footer-container .fa-linkedin:hover,
+.footer-container .fa-youtube:hover,
+.footer-container .fa-twitter:hover {
+  transform: none;
+}
+
+.alert {
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.alert ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.alert li {
+  margin-bottom: 5px;
+}
+  
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+  
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+  

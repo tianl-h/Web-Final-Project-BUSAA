@@ -1,0 +1,71 @@
+/* Style for the job board */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+  color: #252525;
+}
+
+p {
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.job-buttons {
+  margin-top: 20px;
+}
+
+.job-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 16px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.job-buttons a:hover {
+  background-color: #23527c;
+}
+
+/* Background styles */
+.job-board-container {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.job-board-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+}
+  

@@ -1,0 +1,104 @@
+/* CSS styles for a basic container with a form, including input fields, labels, and buttons */
+#modal-button {
+  background-color: cyan;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+#modal-button:hover {
+  background-color: rgba(0, 255, 255, 0.8);
+}
+
+
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 16px 48px 16px 16px;
+  position: relative;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.close {
+  position: absolute;
+  top: 16px; /* Adjusted top value */
+  right: 16px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1); /* Added background color */
+  border-radius: 50%; /* Added border-radius */
+  width: 32px; /* Added width */
+  height: 32px; /* Added height */
+  line-height: 30px; /* Added line-height */
+  text-align: center; /* Added text-align */
+}
+
+.close:hover {
+  color: #d4d4d4;
+}
+
+.modal-body {
+  padding: 16px;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-body > div {
+  flex-basis: calc(33.33% - 16px);
+  margin: 8px;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body > div:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-footer {
+  background-color: #f7f7f7;
+  border-radius: 0 0 8px 8px;
+  padding: 8px 16px;
+}
+
+.btn-secondary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #0069d9;
+}
+
+.event-modal-container #eventsModal {
+  display: none;
+}
+
+
+
