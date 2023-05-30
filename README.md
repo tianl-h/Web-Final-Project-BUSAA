@@ -15,11 +15,11 @@ Welcome to the BUSAA Web Application! This project showcases my skills in web ap
 ## Getting Started
 To explore the BUSAA Web Application locally or review the source code:
 
-## Clone the repository: git clone <repository-url>
-## Install the dependencies: npm install
-## Configure the MongoDB connection in the index.js file if necessary.
-## Start the server: npm start
-Open your web browser and visit http://localhost:8080 to access the application.
+1. Clone the repository: git clone https://github.com/tianl-h/Web-Final-Project-BUSAA.git
+2. Install the dependencies: npm install
+3. Configure the MongoDB connection in the index.js file if necessary.
+4. Start the server: npm start
+5. Open your web browser and visit http://localhost:8080 to access the application.
 
 ## Contributing
 Contributions to this project are welcome. If you have any suggestions, improvements, or bug fixes, please feel free to open an issue or submit a pull request. Your contributions will help enhance the functionality and quality of the BUSAA Web Application.
