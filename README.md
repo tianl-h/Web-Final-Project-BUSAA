@@ -21,6 +21,8 @@ To explore the BUSAA Web Application locally or review the source code:
 4. Configure the MongoDB connection in the index.js file if necessary.
 5. Start the server: node index.js
 6. Open your web browser and visit http://localhost:8080 to access the application.
+7. Admin Account
+An admin account is automatically created when you run the application for the first time. The email address for the admin account is admin@example.com, and the password is 12345. I recommend changing the password for the admin account in the index.js as soon as possible after logging in.
 
 ## Contributing
 Contributions to this project are welcome. If you have any suggestions, improvements, or bug fixes, please feel free to open an issue or submit a pull request. Your contributions will help enhance the functionality and quality of the BUSAA Web Application.
