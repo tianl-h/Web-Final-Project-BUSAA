@@ -19,7 +19,7 @@ To explore the BUSAA Web Application locally or review the source code:
 2. cd Web-Final-Project-BUSAA
 3. Install the dependencies: npm install
 4. Configure the MongoDB connection in the index.js file if necessary.
-5. Start the server: npm start
+5. Start the server: node index.js
 6. Open your web browser and visit http://localhost:8080 to access the application.
 
 ## Contributing
