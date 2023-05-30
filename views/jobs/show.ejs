@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/job/jobShowStyle.css">
+  <title>Job Details</title>
+</head>
+<body>
+  <div class="job-details-container">
+    <h1><%= job.title %></h1>
+    <h2><%= job.company %></h2>
+    <p><strong>Location:</strong> <%= job.location %></p>
+    <p><strong>Description:</strong><br><%= job.description %></p>
+    <p><strong>Requirements:</strong><br><%= job.requirements %></p>
+    <p><strong>Salary:</strong> <%= job.salary %></p>
+    <p><strong>Contact Email:</strong> <%= job.contactEmail %></p>
+    <p><strong>Contact Phone:</strong> <%= job.contactPhone %></p>
+    <p><strong>Post Date:</strong> <%= job.postDate.toLocaleDateString() %></p>
+    <p><strong>Deadline Date:</strong> <%= job.deadlineDate.toLocaleDateString() %></p>
+    <p><strong>Job Status:</strong> <%= job.isActive ? "Active" : "Closed" %></p>
+    <% if (user && user.isAdmin) { %>
+      <div class="job-buttons">
+        <a href="/jobs/new">Add New Job</a>
+        <a href="/jobs/<%= job._id %>/edit">Edit Job</a>
+        <a href="/jobs/<%= job._id %>/delete?_method=DELETE" onclick="return confirm('Are you sure you want to delete this facility?');">Delete Job</a>
+      </div>
+    <% } %>
+  
+    <a href="/jobs">Back to Job Board</a>
+  </div>
+  </body>
+</html>
+    

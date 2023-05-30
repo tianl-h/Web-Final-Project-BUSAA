@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/event/eventIndexStyle.css">
+  <title>Events</title>
+</head>
+<body>
+  <h1>Events</h1>
+  <h2>Students & Alumni of Brandeis University</h2>
+  <p>Join us for engaging and informative events and connect with the Brandeis community. 
+    Our events are a mix of virtual and in-person programs.</p>
+  <div class="event-board-container">
+    <div class="event-board-content">
+    <table>
+      <tbody>
+        <% events.forEach(event => { %>
+          <tr>
+            <td><%= event.title %></td>
+            <td><%= event.description %></td>
+            <td><%= event.location %></td>
+            <td><%= event.startDate.toISOString().substring(0, 10) %></td>
+            <td><%= event.endDate.toISOString().substring(0, 10) %></td>
+            <td>
+              <a href="/events/<%= event._id %>">View</a>
+              <br>
+              <% if (user && user.isAdmin) { %>
+                <a href="/events/<%= event._id %>/edit">Edit</a>
+                <a href="/events/<%= event._id %>/delete?_method=DELETE" onclick="return confirm('Are you sure you want to delete this event?')">Delete</a>
+              <% } %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <% if (user && user.isAdmin) { %>
+    <div class="event-buttons">
+      <a href="/events/new">Add New Event</a>
+    </div>
+  <% } %>
+</body>
+</html>

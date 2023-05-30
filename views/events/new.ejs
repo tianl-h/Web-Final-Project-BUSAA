@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/event/eventEditStyle.css">
+  <title>Create New Event</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Create New Event</h1>
+
+  <form action="/events/create" method="POST">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+    </div>
+    <div>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location">
+    </div>
+    <div>
+      <label for="startDate">Start Date:</label>
+      <input type="datetime-local" id="startDate" name="startDate">
+    </div>
+    <div>
+      <label for="endDate">End Date:</label>
+      <input type="datetime-local" id="endDate" name="endDate">
+    </div>
+    <div>
+      <label for="isOnline">Is Online:</label>
+      <input type="checkbox" id="isOnline" name="isOnline">
+    </div>
+    <div>
+      <label for="registrationLink">Registration Link:</label>
+      <input type="text" id="registrationLink" name="registrationLink">
+    </div>
+    <button type="submit">Create Event</button>
+  </form>
+  <br>
+  <a href="/events">Back to events</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brandeis University Students & Alumni Association</title>
+    <script src="https://kit.fontawesome.com/f7acfd9d96.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="/images/BrandeisLogo.png" alt="Brandeis Logo">
+        </div>
+        <div class="header-text">
+          <h1>Brandeis University</h1>
+          <h2>Students & Alumni Association</h2>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/jobs">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a href="/events">Events</a>
+        </li>
+        <%- include("events/eventsModal.ejs") %>
+        <li class="nav-item">
+          <a href="/chat">BUSAA Chat Room</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact">Contact</a>
+        </li>
+        <% if (loggedIn) { %>
+          <li class="nav-item">
+            <a href="/users/logout">Logout</a>
+          </li>
+          <li class="nav-item">
+            <% if (currentUser) { %>
+              <a href="/users/<%= currentUser._id %>">Logged in as <%= currentUser.name %></a>
+              <div style="display: none" id="apiToken"><%= currentUser.apiToken %></div>
+            <% } %>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a href="/users/login">Login</a>
+          </li>
+        <% } %>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+      <% if (flashMessages) { %>
+        <% for (const key in flashMessages) { %>
+          <% if (Array.isArray(flashMessages[key])) { %>
+            <% flashMessages[key].forEach((message) => { %>
+              <div class="alert alert-danger" role="alert">
+                <%= message %>
+              </div>
+              <br> <!-- add a line break after each message -->
+            <% }); %>
+          <% } else { %>
+            <div class="alert alert-danger" role="alert">
+              <%= flashMessages[key] %>
+            </div>
+            <br> <!-- add a line break after each message -->
+          <% } %>
+        <% } %>
+      <% } %>          
+      <%- body%>
+    </div>
+    </main>
+    <footer>
+      <div class="footer-text">© 2023 Brandeis University</div>
+      <div class="social-media-icons">
+        <!-- Social media icons container -->
+        <div class="social-media-icon">
+          <!-- Facebook icon -->
+          <a href="https://www.facebook.com/brandeisuniversity/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+        <div class="social-media-icon">
+          <!-- Instagram icon -->
+          <a href="https://www.instagram.com/brandeisuniversity/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <div class="social-media-icon">
+          <!-- Linkedin icon -->
+          <a href="https://www.linkedin.com/school/brandeis-university/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="social-media-icon">
+          <!-- Youtube icon -->
+          <a href="https://www.youtube.com/user/BrandeisUniversity" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+        <div class="social-media-icon">
+          <!-- Twitter icon -->
+          <a href="https://twitter.com/BrandeisU" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+     -->
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
+    <script type="text/javascript" src="/js/event.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/user/userEditStyle.css">
+  <title>User Details</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Create New User</h1>
+  <form action="/users/create" method="POST">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div>
+      <label for="role">Role:</label>
+      <select id="role" name="role">
+        <option value="student">Student</option>
+        <option value="alumni">Alumni</option>
+      </select>
+    </div>
+    <div>
+      <label for="zipCode">Zip Code:</label>
+      <input type="text" id="zipCode" name="zipCode">
+    </div>
+    <div>
+      <label for="graduationYear">Graduation Year:</label>
+      <input type="text" id="graduationYear" name="graduationYear">
+    </div>
+    <div>
+      <label for="major">Major:</label>
+      <input type="text" id="major" name="major">
+    </div>
+    <div>
+      <label for="job">Job:</label>
+      <input type="text" id="job" name="job">
+    </div>
+    <div>
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company">
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city">
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state">
+    </div>
+    <div>
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country">
+    </div>
+    <div>
+      <label for="bio">Bio:</label>
+      <input type="text" id="bio" name="bio">
+    </div>
+    <div>
+      <label for="interests">Interests:</label>
+      <textarea id="interests" name="interests" rows="4" placeholder="Enter your interests separated by commas (e.g., programming, sports, music)"></textarea>
+    </div>
+    <button type="submit">Create User</button>
+  </form>
+  </div>
+</body>
+

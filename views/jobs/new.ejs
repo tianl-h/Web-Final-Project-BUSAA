@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/job/jobEditStyle.css">
+  <title>Create New Job</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Create New Job</h1>
+  <form action="/jobs/create" method="POST">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div>
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required>
+    </div>
+    <div>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+    </div>
+    <div>
+      <label for="requirements">Requirements:</label>
+      <textarea id="requirements" name="requirements" rows="4" required></textarea>
+    </div>
+    <div>
+      <label for="salary">Salary:</label>
+      <input type="number" id="salary" name="salary" required>
+    </div>
+    <div>
+      <label for="contactEmail">Contact Email:</label>
+      <input type="email" id="contactEmail" name="contactEmail" required>
+    </div>
+    <div>
+      <label for="contactPhone">Contact Phone:</label>
+      <input type="tel" id="contactPhone" name="contactPhone" required>
+    </div>
+    <div>
+      <label for="deadlineDate">Deadline Date:</label>
+      <input type="date" id="deadlineDate" name="deadlineDate" required>
+    </div>
+    <div>
+      <label for="isActive">Is Active:</label>
+      <input type="checkbox" name="isActive" id="isActive" <%= job.isActive ? "checked" : "" %>><br>
+    </div>
+    <button type="submit">Create Job</button>
+  </form>
+  <br>
+  <a href="/jobs">Back to Job Board</a>
+  </div>
+</body>
+</html>

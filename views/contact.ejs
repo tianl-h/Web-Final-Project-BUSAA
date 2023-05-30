@@ -1,0 +1,52 @@
+
+<link rel="stylesheet" href="/css/contactStyle.css" />
+<meta
+    name="contact"
+    content="our information and a form if you want to contact us"
+/>
+<meta name="keywords" content="contact, information, phone number, email" />
+
+<div class="content-container">
+    <h1>Contact Us!</h1>
+    <h2>Our Location</h2>
+    <p class = "p-contact">415 South Street<br />Waltham, MA 02453<br />USA</p>
+    <h2>Contact Information</h2>
+    <p class = "p-contact">
+        <strong>Phone:</strong> 7817363668<br />
+        <strong>Email:</strong>info@busaa@brandeis.edu
+    </p>
+    <% if (user && user.isAdmin) { %>
+
+    <a class="btn btn-primary" href="/contact/index">Contact Messages</a>
+
+    <% } %>
+    <form action="/contact" method="post">
+        <h2>Send us a message</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+                name="issue"
+                id="issue"
+                cols="30"
+                rows="10"
+                class="form-control"
+                required
+            ></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

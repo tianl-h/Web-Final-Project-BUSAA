@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/css/user/userEditStyle.css">
+<div class="container">
+  <h1>Edit User</h1>
+
+<form action="/users/<%= user._id %>/update?_method=PUT" method="POST"> 
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= user.name %>">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<%= user.email %>">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+  </div>
+  <div>
+    <label for="role">Role:</label>
+    <select id="role" name="role">
+      <option value="student" <% if (user.role === 'student') { %>selected<% } %>>Student</option>
+      <option value="alumni" <% if (user.role === 'alumni') { %>selected<% } %>>Alumni</option>
+    </select>
+  </div>
+  <div>
+    <label for="graduationYear">Graduation Year:</label>
+    <input type="text" id="graduationYear" name="graduationYear" value="<%= user.graduationYear %>">
+  </div>
+  <div>
+    <label for="major">Major:</label>
+    <input type="text" id="major" name="major" value="<%= user.major %>">
+  </div>
+  <div>
+    <label for="job">Job:</label>
+    <input type="text" id="job" name="job" value="<%= user.job %>">
+  </div>
+  <div>
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company" value="<%= user.company %>">
+  </div>
+  <div>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" value="<%= user.city %>">
+  </div>
+  <div>
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" value="<%= user.state %>">
+  </div>
+  <div>
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" value="<%= user.country %>">
+  </div>
+  <div>
+    <label for="zipCode">Zip Code:</label>
+    <input type="text" id="zipCode" name="zipCode" value="<%= user.zipCode %>">
+  </div>
+  <div>
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio"><%= user.bio %></textarea>
+  </div>
+  <div>
+    <label for="interests">Interests:</label>
+    <textarea id="interests" name="interests"><%= user.interests.join(', ') %></textarea>
+  </div>
+  <button type="submit">Update User</button>
+</form>
+</div>
+

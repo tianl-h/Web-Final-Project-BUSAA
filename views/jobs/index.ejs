@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/job/jobIndexStyle.css">
+  <title>Jobs</title>
+</head>
+<body>
+  <h1>Jobs</h1>
+  <h2>Students & Alumni of Brandeis University</h2>
+  <p>Whether you're just starting out or changing careers after decades, whether you'd like to hire a Brandeis student or offer career guidance, we're here to help. Reach out to one of our four career centers to find resources, volunteer, make an appointment and more.</p>
+  <div class="job-board-container">
+    <div class="job-board-content">
+      <table>
+        <tbody>
+          <% jobs.forEach(job => { %>
+            <tr>
+              <td><%= job.title %></td>
+              <td><%= job.company %></td>
+              <td><%= job.location %></td>
+              <td><%= job.deadlineDate.toISOString().substring(0, 10) %></td>
+              <td>
+                <a href="/jobs/<%= job._id %>">View</a>
+                <% if (user && user.isAdmin) { %>
+                  <a href="/jobs/<%= job._id %>/edit">Edit</a>
+                  <a href="/jobs/<%= job._id %>/delete?_method=DELETE" onclick="return confirm('Are you sure you want to delete this job?')">Delete</a>
+                <% } %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% if (user && user.isAdmin) { %>
+    <div class="job-buttons">
+      <a href="/jobs/new">Post a new job</a>
+    </div>
+  <% } %>
+</body>
+</html>

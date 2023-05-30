@@ -1,0 +1,34 @@
+<form id='signinform' method="POST" action="/users/login">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mb-4">Sign In</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+      </form>
+      <p class="text-center mt-3">
+        Don't have an account yet? <a href="/users/create">Sign Up</a>
+      </p>
+    </div>
+  </div>
+</div>
+</form>

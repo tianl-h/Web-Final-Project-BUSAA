@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/user/userIndexStyle.css">
+
+<body>
+  <h1>Users Table</h1>
+  <div class="user-board-container">
+    <div class="user-board-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Graduation Year</th>
+            <th>Major</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(function(user) { %>
+            <tr>
+              <td><a href="/users/<%= user._id %>"><%= user.name %></a></td>
+              <td><%= user.email %></td>
+              <td><%= user.graduationYear %></td>
+              <td><%= user.major %></td>
+              <td class="edit-delete-links">
+                <a href="/users/<%= user._id %>/edit">Edit</a>
+                <form action="/users/<%= user._id %>/delete?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?')">
+                  <button type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% if (user && user.isAdmin) { %>
+    <div class="user-buttons">
+      <a href="/users/new">Create a new user</a>
+    </div>
+  <% } %>
+</body>

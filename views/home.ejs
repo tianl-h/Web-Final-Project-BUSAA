@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/homeStyle.css" />
+<section id="showcase">
+  <div class="home-container">
+    <h1>Welcome to BUSSA</h1>
+    <h2>Students & Alumni of Brandeis University</h2>
+    <br>
+    <p>The Brandeis Students and Alumni Association is a vibrant community that offers
+      lifelong opportunities for students and alumni to stay connected to Brandeis and each other.</p>
+      <section class="events-section">
+        <a href="events/">
+            <h2 class="title">Events</h2>
+        </a>
+        <ul>
+          <% events.forEach(function(event) { %>
+          <li>
+              <h3 class="name"><%= event.name %></h3>
+              <h5 class="detail"><%= event.title %></h5>
+          <h5 class="detail"><%= new Date(event.startDate).toLocaleDateString()%></h5>
+          </li>
+          <% }); %>
+      </ul>
+    </section>
+    <section class="jobs-section">
+        <a href="jobs/">
+            <h2 class="title">Jobs</h2>
+        </a>
+        <ul>
+          <% jobs.forEach(function(job) { %>
+          <li>
+              <h5 class="name"><%= job.title %></h3>
+              <h5 class="job-detail"><%= job.description %></h3>
+              <h5 class="job-detail"><%= job.contactEmail %></h5>
+          </li>
+          <% }); %>
+      </ul>
+    </section>
+  </div>
+</section>

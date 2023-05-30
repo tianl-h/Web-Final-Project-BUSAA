@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUSAA Chat</title>
+  <link rel="stylesheet" type="text/css" href="/css/chatStyle.css">
+</head>
+<body>
+  <div class="chat-wrapper">
+    <h1 class="chat-header">BUSAA Chat</h1>
+    <p class="chat-introduction">
+      Welcome to the Brandeis University Student and Alumni Association Chat! Connect with fellow members, share job opportunities, and discuss upcoming events.
+    </p>
+    <% if (currentUser) { %>
+      <button id="chat-button" class="chat-button">Open Chat</button>
+      <div id="chat-container" class="chat-container" style="display:none;">
+        <button id="chat-close-button" class="chat-close-button">Close Chat</button>
+        <div class="chat-window">
+          <ul id="chat" class="chat"></ul>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <input id="chat-input" type="text" placeholder="Type your message..." />
+          <input
+            id="chat-user-name"
+            type="hidden"
+            value="<%= currentUser.name %>"
+          />
+          <input id="chat-user-id" type="hidden" value="<%= currentUser._id %>" />
+          <input type="submit" value="Send" class="chat-submit" />
+        </form>
+      </div>
+    <% } else { %>
+      <div class="login-message">
+      Please <a href="/users/login">log in</a> to join the chat.
+    </div>
+    <% } %>
+  </div>
+</body>
+</html>
